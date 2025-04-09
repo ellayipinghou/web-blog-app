@@ -34,4 +34,4 @@ npm install
 <br />
 nodemon index.js
 
-Program will run on localhost:3000.
+Program will run on localhost.
