@@ -1,37 +1,47 @@
-# web-blog-app
-Responsive and stylized web application that allows users to add, edit, and delete blog posts. Built using EJS, CSS, Node.js, Express.js, and PostgreSQL.
+# Web Blog App 🌐
+A responsive and stylized web application to manage blog posts. Built using EJS, CSS, Node.js, Express.js, and PostgreSQL.
 
-Make sure to create and fill out .env file accordingly:
+## Features ✨
+- 📝 Add new blog posts
+- ✏️ Edit existing posts
+- ❌ Delete posts
+- 🔍 View posts in a user-friendly interface
 
+# Setup & Configuration ⚙️
+Before you begin, ensure that your .env file is configured properly:
+
+```
 PG_USER=your_username
-<br />
 PG_HOST=your_host_here
-<br />
 PG_DATABASE=your_database_name_here
-<br />
 PG_PASSWORD=your_database_password_here
-<br />
 PG_PORT="5432"
+```
+Make sure PGAdmin and PostgreSQL is installed on your machine. For setting up the table in your database:
 
-PostgreSQL must be downloaded. To set up table, navigate to database in pgAdmin and enter into Query Tool:
-
+## Create Table in PostgreSQL 🛠️
+1. Open pgAdmin and navigate to your database
+2. Enter the following SQL code in the Query Tool to create the posts table:
+```
 CREATE TABLE posts (
-  <br />
   id SERIAL,
-  <br />
   title VARCHAR(100),
-  <br />
   author VARCHAR(50),
-  <br />
   date_created VARCHAR(10),
-  <br />
-  post_body text
-  <br />
-); 
+  post_body TEXT
+);
+```
 
-To run:
+## Running the Application 🚀
+To get the app up and running locally:
+
+1. Install the required dependencies:
+```
 npm install
-<br />
+```
+2. Start the application using Nodemon:
+```
 nodemon index.js
+```
 
-Program will run on localhost:5432.
+The application will be available at: localhost:5432.
